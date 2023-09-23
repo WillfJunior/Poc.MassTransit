@@ -1,0 +1,36 @@
+version: '3.4'
+services:
+  mssql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "K@ua1011"
+      MSSQL_PID: Express
+      
+    ports:
+      - "1433:1433"
+    expose:
+      - 1433
+  rabbit-service:
+    image: rabbitmq:3-management
+    hostname: rabbitmqservice
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    expose:
+      - 5672
+      - 15672
+    volumes:
+      - /docker_conf/rabbitmq/data/:/var/lib/rabbitmq/
+    environment:
+      - RABBITMQ_DEFAULT_USER = guest
+      - RABBITMQ_DEFAULT_PASS = guest
+
+    restart: always    
+    networks:
+      - mensageria
+
+networks: 
+    mensageria:
+      driver: bridge
+
