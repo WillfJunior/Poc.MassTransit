@@ -1,5 +1,6 @@
 ﻿using MassTransit;
 using Newtonsoft.Json;
+using Poc.MassTransit.Message;
 using System;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -38,7 +39,7 @@ namespace Poc.MassTransit.Web.Controllers
         {
             try
             {
-                var log = new logshared.Logs();
+                var log = new LogTeste();
 
                 log.Id = Guid.NewGuid();
                 log.CreatedAt = DateTime.Now;

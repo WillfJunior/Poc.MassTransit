@@ -1,5 +1,5 @@
-﻿using logshared;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Poc.MassTransit.Message;
 
 namespace Poc.MassTransit.worker.Infra
 {
@@ -7,7 +7,7 @@ namespace Poc.MassTransit.worker.Infra
     {
         public LogDbContext(DbContextOptions<LogDbContext> options) : base(options) { }
         
-        public DbSet<Logs> LogsPortal { get; set; }
+        public DbSet<LogTeste> LogsPortal { get; set; }
 
         
     }

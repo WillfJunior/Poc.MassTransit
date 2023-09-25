@@ -1,9 +1,9 @@
-﻿using logshared;
+﻿using Poc.MassTransit.Message;
 
 namespace Poc.MassTransit.worker.Infra
 {
     public interface ILogRepository
     {
-        Task AddLog(Logs logs);
+        Task AddLog(LogTeste logs);
     }
 }

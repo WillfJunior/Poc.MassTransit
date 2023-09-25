@@ -5,9 +5,7 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poc.MassTransit.Web", "Poc.MassTransit.Web\Poc.MassTransit.Web.csproj", "{45D9EF45-34F4-4E12-B80E-A351A709A795}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poc.MassTransit.worker", "Poc.MassTransit.worker\Poc.MassTransit.worker.csproj", "{A6B77FEB-3F3F-45E7-A3FA-78FBDB065D28}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "logshared", "logshared\logshared.csproj", "{A27394E1-2968-448C-80BE-ED30D96C096C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Poc.MassTransit.worker", "Poc.MassTransit.worker\Poc.MassTransit.worker.csproj", "{A6B77FEB-3F3F-45E7-A3FA-78FBDB065D28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{A6B77FEB-3F3F-45E7-A3FA-78FBDB065D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6B77FEB-3F3F-45E7-A3FA-78FBDB065D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6B77FEB-3F3F-45E7-A3FA-78FBDB065D28}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A27394E1-2968-448C-80BE-ED30D96C096C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A27394E1-2968-448C-80BE-ED30D96C096C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A27394E1-2968-448C-80BE-ED30D96C096C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A27394E1-2968-448C-80BE-ED30D96C096C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

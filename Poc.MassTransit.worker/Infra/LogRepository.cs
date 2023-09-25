@@ -1,4 +1,4 @@
-﻿using logshared;
+﻿using Poc.MassTransit.Message;
 
 namespace Poc.MassTransit.worker.Infra
 {
@@ -11,7 +11,7 @@ namespace Poc.MassTransit.worker.Infra
             _dbContext = dbContext;
         }
 
-        public async Task AddLog(Logs logs)
+        public async Task AddLog(LogTeste logs)
         {
             _dbContext.LogsPortal.Add(logs);
             await _dbContext.SaveChangesAsync();
