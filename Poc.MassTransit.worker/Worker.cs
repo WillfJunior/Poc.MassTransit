@@ -17,12 +17,12 @@ namespace Poc.MassTransit.worker
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            using (var scope = _serviceProvider.CreateScope())
-            {
-                var dbContext = scope.ServiceProvider.GetRequiredService<LogDbContext>();
+            //using (var scope = _serviceProvider.CreateScope())
+            //{
+            //    var dbContext = scope.ServiceProvider.GetRequiredService<LogDbContext>();
 
-                await dbContext.Database.MigrateAsync();
-            }
+            //    await dbContext.Database.MigrateAsync();
+            //}
 
             while (!stoppingToken.IsCancellationRequested)
             {

@@ -30,6 +30,12 @@ services:
     networks:
       - mensageria
 
+  Logdb:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+
 networks: 
     mensageria:
       driver: bridge

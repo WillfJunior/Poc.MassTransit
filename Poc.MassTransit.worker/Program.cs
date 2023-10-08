@@ -16,10 +16,11 @@ var host = Host.CreateDefaultBuilder(args)
     
     .ConfigureServices((hostContext, services) =>
     {
-        var optionsBuilder = new DbContextOptionsBuilder<LogDbContext>();
-        optionsBuilder.UseSqlServer(configuration.GetConnectionString("Default"));
+        //var optionsBuilder = new DbContextOptionsBuilder<LogDbContext>();
+        //optionsBuilder.UseSqlServer(configuration.GetConnectionString("Default"));
 
-        services.AddScoped<LogDbContext>(db => new LogDbContext(optionsBuilder.Options));
+        //services.AddScoped<LogDbContext>(db => new LogDbContext(optionsBuilder.Options));
+       services.AddScoped<IMongoContext, MongoContext>();
 
         services.AddScoped<ILogRepository, LogRepository>();
         services.AddHostedService<Worker>();
